@@ -1,0 +1,47 @@
+@import "@/assets/styles/_variables";
+@import "@/assets/styles/_mixins";
+
+.card {
+  transition: all 0.2s ease-in-out;
+  padding-bottom: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0.1rem 0.1rem 0.6rem #afafaf;
+  position: relative;
+  @include tablet {
+    border: 1px solid lightgray;
+    margin: 1rem 0;
+    padding-bottom: 0;
+  }
+  &__image {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem 0.75rem 0 0;
+    @include tablet {
+      height: 13rem;
+    }
+  }
+  &__full-name {
+    @include tablet {
+      height: 3rem;
+      font-size: 1rem;
+    }
+  }
+  &__like-container {
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    @include desktop {
+      top: 0.1rem;
+      right: 0.2rem;
+    }
+  }
+  p {
+    padding-bottom: 0.5rem;
+  }
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
